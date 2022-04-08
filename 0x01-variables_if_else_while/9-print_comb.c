@@ -14,15 +14,15 @@ int main(void)
 		putchar(i);
 		if (i < '9')
 		{
-		putchar(',');
+			putchar(',');
 		}
-		else	
+		else
 		{
 			continue;
 		}
 		putchar(' ');
+					
 	}
 	putchar('\n');
 	return (0);
 }
-
