@@ -12,7 +12,7 @@ int _islower(int c)
 	
 	for (c = 'a'; c <= 'z'; c++)
 	{
-		if (c >= 'a' && c <= 'z')
+		if (c == islower(c))
 		{
 			num = 1;
 		}
@@ -20,6 +20,7 @@ int _islower(int c)
 		{
 			num = 0;
 		}
-		return (num);
+		
 	}
+	return num;
 }
