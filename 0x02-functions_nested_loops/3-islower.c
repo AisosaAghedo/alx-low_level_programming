@@ -2,9 +2,9 @@
 #include "main.h"
 
 /**
- * _islower(int c) - Entry point
+ * _islower - Entry point
  *
- * c: contains value to be compared
+ *@c: contains value to be compared
  *
  * Return: Always 0
  */
