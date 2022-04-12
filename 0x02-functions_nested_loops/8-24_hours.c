@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * Jack bauer - Entry point
+ * jack_bauer - Entry point
  *
  * Return: Always 0
  */
