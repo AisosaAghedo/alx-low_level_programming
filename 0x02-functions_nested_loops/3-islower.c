@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include "main.h"
+#include<ctype.h>
 /**
  * _islower - Entry point
  *
@@ -9,14 +10,16 @@ int _islower(int c)
 {
 	int num;
 	
-
-	if ('c' == 'c')
+	for (c = 'a'; c <= 'z'; c++)
 	{
-		num = 1;
+		if (c >= 'a' && c <= 'z')
+		{
+			num = 1;
+		}
+		else
+		{
+			num = 0;
+		}
+		return (num);
 	}
-	else
-	{
-		num = 0;
-	}
-	return num;
 }
