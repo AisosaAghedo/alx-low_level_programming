@@ -3,6 +3,8 @@
 /**
  * add - Entry point
  *
+ * @a: print int a
+ * @b: print int b
  * Return: Always 0
  */
 int add(int a, int b)
@@ -10,6 +12,5 @@ int add(int a, int b)
 	int n;
 
 	n = a + b;
-		printf("%d\n", n);
-	return (0);
+	return (n);
 }
