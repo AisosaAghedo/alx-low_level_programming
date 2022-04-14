@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * main - prints the largest number in the array
+ * main - prints the largest number 3 integers
  * Return: 0
  */
 int main(void)
