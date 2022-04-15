@@ -4,7 +4,7 @@
  * @n: number of times to  print diagonal line
  * Return: 0
  */
- void print_diagonal(int n)
+void print_diagonal(int n)
 {
 	int a;
 	int b;
@@ -13,7 +13,7 @@
 	{
 		for (a = 0; a < n; a++)
 		{
-			for (b =0; b < a; b++)
+			for (b = 0; b < a; b++)
 			{
 				_putchar(' ');
 			}
