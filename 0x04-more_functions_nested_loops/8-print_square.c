@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * print_square - Entry point
  * @size: size of the square
@@ -7,14 +6,15 @@
  */
 void print_square(int size)
 {
-	int x, y;
+	int x;
+	int y;
 
 
 	if (size > 0)
 	{
-		for (x = 0; x < size; x++);
+		for (x = 0; x < size; x++)
 		{
-			for (y = 0; y < size; y++);
+			for (y = 0; y < size; y++)
 			{
 				_putchar(35);
 			}
