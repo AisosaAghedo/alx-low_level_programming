@@ -7,24 +7,28 @@ int main(void)
 {
 	int n;
 
-	for (n = 1; n < 100; n++)
+	for (n = 1; n <= 100; n++)
 	{
 		if ((n % 3) == 0 && (n % 5) == 0)
 		{
-			printf("Fizzbuzz\n");
+			printf("FizzBuzz ");
 		}
 		else if (n % 3 == 0)
 		{
-			printf("Fizz\n");
+			printf("Fizz ");
 		}
 		else if (n % 5 == 0)
 		{
-			printf("Buzz\n");
+			if(n < 100)
+				printf("Buzz ");
+			else
+				printf("Buzz");
 		}
 		else
 		{
-			printf("%d\n", n);
+			printf("%d ", n);
 		}
 	}
 	return (0);
+	printf("\n");
 }
