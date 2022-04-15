@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <ctype.h>
 /**
- * isupper - Entry point
- * @c: stores the integer
+ *_isupper - Function to check for uppercases
+ * @c: variable to store character
  * Return: 0
  */
 
