@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_square - Entry point
  * @size: size of the square
@@ -7,6 +8,7 @@
 void print_square(int size)
 {
 	int x, y;
+
 
 	if (size > 0)
 	{
