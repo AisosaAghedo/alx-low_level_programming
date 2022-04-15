@@ -1,27 +1,14 @@
 #include <stdio.h>
-
-
-
 /**
+ * main - Entry point
  *
- * main - program to find the prime factor
- *
- *
- *
- * Return: Always 0.
- *
- */     
-
-
-
+ * Return: 0
+ */
 int main(void)
-
-
-
 {
 
 	long n;
-      	long i;
+	long i;
 
 
 	n = 612852475143;
