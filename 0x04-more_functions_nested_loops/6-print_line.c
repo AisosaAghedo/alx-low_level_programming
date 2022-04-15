@@ -14,9 +14,7 @@ void print_line(int n)
 	for (y = 0; y < n; y++)
 	{
 		if (n > 0)
-		{
 			_putchar(z);
-		}
 	}
 	_putchar('\n');
 }
