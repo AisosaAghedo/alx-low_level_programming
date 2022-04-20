@@ -9,6 +9,6 @@
  */
 int _strlen(char *s)
 {
-	puts("%lu", strlen(s));
+	printf("%lu", strlen(*s));
 	return (0);
 }
