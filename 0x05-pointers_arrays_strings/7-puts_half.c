@@ -25,7 +25,7 @@ void puts_half(char *str)
 			}
 			else
 			{
-				n = j
+				n = j;
 				printf("%c", str[i]);
 			}
 		}
