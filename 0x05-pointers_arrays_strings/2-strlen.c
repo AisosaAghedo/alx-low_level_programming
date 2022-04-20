@@ -9,6 +9,6 @@
  */
 int _strlen(char *s)
 {
-	printf("%lu", strlen(s));
+	printf("%lu\n", strlen(s));
 	return (0);
 }
