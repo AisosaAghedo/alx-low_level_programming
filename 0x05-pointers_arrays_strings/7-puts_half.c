@@ -19,7 +19,7 @@ void puts_half(char *str)
 		l = strlen(str);
 		for (i = j; i < l; i++)
 		{
-			if (str[i] % 2 == 0)
+			if (l % 2 == 0)
 			{
 				printf("%c", str[i]);
 			}
