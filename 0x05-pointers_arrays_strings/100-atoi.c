@@ -1,5 +1,7 @@
 #include "main.h"
-
+/**
+ * is_numerical - function to 
+ */
 int is_numerical(unsigned int n)
 
 {
@@ -51,12 +53,7 @@ int _atoi(char *s)
 
 		}
 
-
-
 	}
 
-
-
 	return (number * sign);
-
 }
