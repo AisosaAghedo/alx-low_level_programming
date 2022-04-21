@@ -1,15 +1,5 @@
 #include "main.h"
 
-/**
- *
- *  * is_numerical - check if it is a digit
- *
- *   * @n: Number
- *
- *    * Return: If is a number, return 1 else return 0
- *
- *     */
-
 int is_numerical(unsigned int n)
 
 {
@@ -19,14 +9,10 @@ int is_numerical(unsigned int n)
 }
 
 /**
- *
- *  * _atoi - convert a string to an integer
- *
- *   *@s: String
- *
- *    * Return: Return the num
- *
- *     */
+ * _atoi - function witrh unsigned int
+ * @s: variable to store number
+ * Return: 0
+ */
 
 int _atoi(char *s)
 
@@ -71,6 +57,6 @@ int _atoi(char *s)
 
 
 
-	return (number *sign);
+	return (number * sign);
 
 }
