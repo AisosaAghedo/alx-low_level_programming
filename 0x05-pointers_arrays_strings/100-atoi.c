@@ -1,6 +1,8 @@
 #include "main.h"
 /**
- * is_numerical - function to 
+ * is_numerical - function to
+ * @n: variable
+ * Return: 0
  */
 int is_numerical(unsigned int n)
 
