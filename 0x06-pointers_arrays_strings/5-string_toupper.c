@@ -10,5 +10,15 @@
  */
 char *string_toupper(char *str)
 {
-	return (toupper(str));
+	int i;
+	char str[1000];
+	int len;
+
+	len = strlen(str);
+
+	for (i = 0; i <= len; i++)
+	{
+		return (str[i] = toupper(str[i]));
+	}
+
 }
