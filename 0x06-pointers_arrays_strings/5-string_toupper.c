@@ -8,17 +8,19 @@
  * @str: the string
  * Return: Always 0
  */
-char *string_toupper(char *str)
+char *string_toupper(char *arr)
 {
 	int i;
-	char str[1000];
 	int len;
+	char str[1000];
 
-	len = strlen(str);
+	len =  (int)strlen(arr);
 
 	for (i = 0; i <= len; i++)
 	{
-		return (str[i] = toupper(str[i]));
+	      str[i] = toupper(arr);
 	}
+	strcpy(arr, str);
+	return (arr);
 
 }
