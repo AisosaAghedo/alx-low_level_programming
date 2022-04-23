@@ -5,7 +5,7 @@
 
 /**
  * *string_toupper - function that changes all lowercase letters to uppercase
- * @str: the string
+ * @arr: the string
  * Return: Always 0
  */
 char *string_toupper(char *arr)
@@ -15,10 +15,9 @@ char *string_toupper(char *arr)
 	char str[1000];
 
 	len =  (int)strlen(arr);
-
 	for (i = 0; i <= len; i++)
 	{
-	      str[i] = toupper(arr[i]);
+		str[i] = toupper(arr[i]);
 	}
 	strcpy(arr, str);
 	return (arr);
