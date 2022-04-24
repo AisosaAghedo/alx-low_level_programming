@@ -1,111 +1,94 @@
-nclude "main.h"
-
+#include "main.h"
 #include <stdio.h>
-
 /**
- *
- *  * print_line - prints a s bytes of a buffer
- *
- *   * @c: buffer to print
- *
- *    * @s: bytes of buffer to print
- *
- *     * @l: line of buffer to print
- *
- *      *
- *
- *       * Return: void
- *
- *        */
-
-void print_line(char *c, int s, int l)
-
+ * infinite_add - adds two numbers
+ * @n1: number one.
+ * @n2: number two.
+ * @r: buffer that the function will use to store the result.
+ * @size_r: buffer size:
+ * Return: the pointer to dest.
+ */
+char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 
-	int j, k;
+		int c1 = 0, c2 = 0, op, bg, dr1, dr2, add = 0;
 
-	for (j = 0; j <= 9; j++)
 
-	{
 
-		if (j <= s)
+			while (*(n1 + c1) != '\0')
 
-			printf("%02x", c[l * 10 + j]);
+						c1++;
 
-		else
+				while (*(n2 + c2) != '\0')
 
-			printf("  ");
+							c2++;
 
-		if (j % 2)
+					if (c1 >= c2)
 
-			putchar(' ');
+								bg = c1;
 
-	}
+						else
 
-	for (k = 0; k <= s; k++)
+									bg = c2;
 
-	{
+							if (size_r <= bg + 1)
 
-		if (c[l * 10 + k] > 31 && c[l * 10 + k] < 127)
+										return (0);
 
-			putchar(c[l * 10 + k]);
+								r[bg + 1] = '\0';
 
-		else
+									c1--, c2--, size_r--;
 
-			putchar('.');
+										dr1 = *(n1 + c1) - 48, dr2 = *(n2 + c2) - 48;
 
-	}
+											while (bg >= 0)
 
-}
+													{
 
-/**
- *
- *  * print_buffer - prints a buffer
- *
- *   * @b: buffer to print
- *
- *    * @size: size of buffer
- *
- *     *
- *
- *      * Return: void
- *
- *       */
+																op = dr1 + dr2 + add;
 
-void print_buffer(char *b, int size)
+																		if (op >= 10)
 
-{
+																						add = op / 10;
 
-	int i;
+																				else
 
-	for (i = 0; i <= (size - 1) / 10 && size; i++)
+																								add = 0;
 
-	{
+																						if (op > 0)
 
-		printf("%08x: ", i * 10);
+																									*(r + bg) = (op % 10) + 48;
 
-		if (i < size / 10)
+																								else
 
-		{
+																												*(r + bg) = '0';
 
-			print_line(b, 9, i);
+																										if (c1 > 0)
 
-		}
+																														c1--, dr1 = *(n1 + c1) - 48;
 
-		else
+																												else
 
-		{
+																																dr1 = 0;
 
-			print_line(b, size % 10 - 1, i);
+																														if (c2 > 0)
 
-		}
+																																		c2--, dr2 = *(n2 + c2) - 48;
 
-		putchar('\n');
+																																else
 
-	}
+																																				dr2 = 0;
 
-	if (size == 0)
+																																		bg--, size_r--;
 
-		putchar('\n');
+																																			}
+
+												if (*(r) == '0')
+
+															return (r + 1);
+
+													else
+
+																return (r);
 
 }
