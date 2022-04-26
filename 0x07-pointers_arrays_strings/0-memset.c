@@ -6,7 +6,7 @@
  *  @s: pointer to the block of memory to fill
  *  @b:  the value to be set
  *  @n: the number of bytes to be set to the value
- *  Return 0
+ *  Return: This function returns a pointer to the memory area s
  */
 char *_memset(char *s, char b, unsigned int n)
 {
