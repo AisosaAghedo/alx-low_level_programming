@@ -4,27 +4,27 @@
  * main - Entry point
  * @argv:argument vector
  * @argc: number of arguments
- * @x: first integer
- * @y: second integer
- * @z: result of multiplication
+ * @result: result of multipliication
  * Return: 0
  */
 int main(int argc, char *argv[])
 {
-	int x;
-	int y;
-	int z;
+	int i;
+	int result;
+	(void)argv;
 
-	x = atoi(argv[1]);
-	y = atoi(argv[2]);
-	z = atoi(argv[(x * y)]);
-	if (argc == 3)
+	result = 1;
+	for (i = 1; i < argc; i++)
 	{
-		printf("%d\n",z);
+		if (argc == 3)
+		{
+			result *= atoi(argv[i]);
+			printf("%d\n", result);
+		}
+		else
+		{
+			printf("Error\n");
+		}
 	}
-	else
-	{
-		printf("Error\n");
-	}
-	return (1);
+	return (0);
 }
