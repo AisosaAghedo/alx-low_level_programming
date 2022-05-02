@@ -4,7 +4,6 @@
  * main - Entry point
  * @argv:argument vector
  * @argc: number of arguments
- * @result: result of multipliication
  * Return: 0
  */
 int main(int argc, char *argv[])
