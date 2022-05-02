@@ -11,7 +11,6 @@ int main(int argc, char *argv[])
 {
 	int i;
 	int result;
-	(void)argv;
 
 	result = 1;
 	for (i = 1; i < argc; i++)
