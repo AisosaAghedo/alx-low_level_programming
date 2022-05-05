@@ -23,3 +23,4 @@ char *str_concat(char *s1, char *s2)
 		r = strcat(s1, s2);
 	}
 	return (r);
+}
