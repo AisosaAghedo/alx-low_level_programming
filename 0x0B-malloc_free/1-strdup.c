@@ -10,9 +10,16 @@
  */
 char *_strdup(char *str)
 {
-	char *r;
+	char r;
 
-	r = strdup(str);
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	else
+	{
+		r = strdup(str);
+	}
 	return (r);
 }
 
