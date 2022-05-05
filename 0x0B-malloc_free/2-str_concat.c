@@ -15,8 +15,8 @@ char *str_concat(char *s1, char *s2)
 	char *r;
 	char *d;
 
-	size_t str1=strlen(s1), str2=strlen(s2), stot=str1+str2+1;
-       	if(stot<s2+1)
+	size_t str1=strlen(s1), str2=strlen(s2), d = str1+str2+1;
+       	if(d < (s2+1))
 	{
 		return (NULL);
 	}
