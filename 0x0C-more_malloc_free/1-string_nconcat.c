@@ -9,13 +9,10 @@
  *  @n: number of bytes
  *  Return: pointe
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p;
-	int l;
-	int b;
-	int k = 0;
+	int l, b, k = 0;
 	size_t str1 = strlen(s1), str2 = strlen(s2);
 
 	l = str1 + str2 + 1;
@@ -33,21 +30,25 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s2 = "";
 	}
-	if (n >= str2)
+	for (b = 0; b < (int)str1; b++)
 	{
-		strcpy(p, s1);
-		strcpy(p + str1, s2);
+		p[b] = s1[b];
 	}
-	else if (n < str2)
+	if (n < str2)
 	{
 		for (b = str1; b <= ((int)n + (int)str1); b++)
 		{
 			p[b] = s2[k];
 			k++;
 		}
-
+	}
+	else
+	{
+		for (b = str1; b <= (int)str2 + (int)str1; b++)
+		{
+			p[b] = s2[k];
+			k++;
+		}
 	}
 	return (p);
 }
-
-
