@@ -21,14 +21,10 @@ int *array_range(int min, int max)
 	{
 		return (NULL);
 	}
-	else
-	{
 	for (i = min; i <= max; i++)
 	{
 		a = a[i];
 	}
-	}
-	
 	return (a);
 }
 
