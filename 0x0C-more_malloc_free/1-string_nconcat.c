@@ -14,7 +14,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p;
 	size_t str1 = strlen(s1), str2 = strlen(s2), l = str1 + str2 + 1;
-	
 	p = (char *)malloc(l);
 	if (p == NULL)
 	{
@@ -22,20 +21,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (s1 == NULL)
 	{
-		s1 = " ";
+		s1 = "";
 	}
 	else if (s2 == NULL)
 	{
-		s2 = " ";
+		s2 = "";
 	}
-	else if (n >= str2)
+	if (n >= str2)
 	{
 		strcpy(p, s1);
 		strcpy(p + str1, s2);
 	}
 	else
 	{
-		return (strncat(s1, s2, n));
+		strncat(s1, s2, n);
 	}
 	return (p);
 }
