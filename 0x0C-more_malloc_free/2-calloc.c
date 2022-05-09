@@ -11,20 +11,21 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	int i;
 	int *p;
-	p = (int *) calloc(nmemb, sizeof(int))
-		if (p == NULL)
-		{
-			return (NULL);
-		}
+
+	p = (int *) calloc(nmemb, sizeof(int));
+	if (p == NULL)
+	{
+		return (NULL);
+	}
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
 	else
 	{
-		for (i = 0; i <= nmemb; i++)
+		for (i = 0; i <= (int)nmemb; i++)
 		{
-			p = p[i];
+			p = (p + i);
 		}
 	}
 	return (p);
