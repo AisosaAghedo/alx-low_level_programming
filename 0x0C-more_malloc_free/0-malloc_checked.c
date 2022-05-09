@@ -11,7 +11,7 @@
 	int *s;
 
 	s = malloc(b);
-	if (s = NULL)
+	if (s == NULL)
 	{
 		exit(98);
 	}
