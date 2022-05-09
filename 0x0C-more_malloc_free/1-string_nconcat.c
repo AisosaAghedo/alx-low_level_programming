@@ -16,19 +16,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	size_t l, str1 = strlen(s1), str2 = strlen(s2);
 
 	l = str1 + str2 + 1;
-	p = (char *) malloc(l);
+	p = (char *) malloc(sizeof(char) * l);
 
 	if (p == NULL)
 	{
 		return (NULL);
-	}
-	if (s1 == NULL)
-	{
-		s1 = "";
-	}
-	else if (s2 == NULL)
-	{
-		s2 = "";
 	}
 	for (b = 0; b < (int)str1; b++)
 	{
@@ -50,5 +42,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			k++;
 		}
 	}
+	p[b - 1] = '\0';
 	return (p);
 }
