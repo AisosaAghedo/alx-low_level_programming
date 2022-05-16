@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 	va_list pa;
 	unsigned int i, x, y;
 	char *s;
-	const char v_arg[] = 'cifs';
+	const char v_arg[] = "cifs";
 
 	va_start(pa, format);
 	i = 0, y = 0;
