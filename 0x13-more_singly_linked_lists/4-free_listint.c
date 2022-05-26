@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdlib.h>
 /**
  * free_listint - function that frees a listint_t list
  * @head: pointer to head node
