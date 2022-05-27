@@ -4,12 +4,14 @@
 /**
  * print_listint_safe - function that prints a listint_t linked list
  * @head: pointer to head node
- * Returns: the number of nodes in the list
+ * Return: the number of nodes in the list
  */
 size_t print_listint_safe(const listint_t *head)
 {
 	const listint_t *temp = NULL;
 	size_t counter = 0;
+
+
 	temp = head;
 
 	if (head == NULL)
