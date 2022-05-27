@@ -8,9 +8,9 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	int *temp = NULL;
+	const listint_t *temp = NULL;
 	size_t counter = 0;
-	temp = head
+	temp = head;
 
 	if (head == NULL)
 	{
@@ -20,7 +20,7 @@ size_t print_listint_safe(const listint_t *head)
 	{
 		while (temp != NULL)
 		{
-			printf("[%p] %i\n", temp->next, temp->n);
+			printf("[%p] %i\n", (void *)temp->next, temp->n);
 			temp = temp->next;
 			counter++;
 		}
