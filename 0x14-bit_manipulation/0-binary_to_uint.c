@@ -14,12 +14,12 @@ unsigned int binary_to_uint(const char *b)
 
 	if (b != NULL)
 	{
-		if (b[i] == '0' || b[i] == '1' || b[i] == '\0')
+		if (b[i] == '0' || b[i] == '1')
 		{
 			while (binary != 0)
 			{
-				temp = temp % 10;
-				temp << i;
+				temp = binary % 10;
+				temp <<= i;
 				sum += temp;
 				binary = binary / 10;
 				i++;
