@@ -14,17 +14,15 @@ unsigned int binary_to_uint(const char *b)
 
 	if (b != NULL)
 	{
-
-			while (binary != 0)
-			{
-
-				temp = binary % 10;
-				temp <<= i;
-				sum += temp;
-				binary = binary / 10;
-				i++;
-			}
-			return (sum);
-	} 
+		while (binary != 0)
+		{
+			temp = binary % 10;
+			temp <<= i;
+			sum += temp;
+			binary = binary / 10;
+			i++;
+		}
+		return (sum);
+	}
 	return (0);
 }
