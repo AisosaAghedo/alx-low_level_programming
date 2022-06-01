@@ -3,6 +3,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * read_textfile - function that reads a text file and prints it to the POSIX standard output
@@ -15,6 +16,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int fd;
 	char buf[1050];
 	int rd;
+
+	if (filename == NULL)
+	{
+		return (0);
+	}
 
 	fd = open("filename.txt", O_RDONLY);
 	if (fd == -1)
