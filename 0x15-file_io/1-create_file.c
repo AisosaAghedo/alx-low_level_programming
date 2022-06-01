@@ -2,6 +2,8 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include "main.h"
+#include <stddef.h>
+#include <unistd.h>
 /**
  * create_file -  function that creates a file
  * @filename: name of the file to create
@@ -10,18 +12,28 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd;
+	int fd, wr;
 
 	if (filename == NULL)
 	{
 		return (-1);
 	}
 
-	fd = open(filename, O_CREAT | O_TRUNC | O_WRONLY, rw);
+	fd = open(filename, O_CREAT | O_TRUNC | O_WRONLY, "rw");
 	if (fd == -1)
 	{
 		return (-1);
 	}
+	
+	if (text_content == NULL)
+	{
+		wr = write(fd, "", 1);
+		if (wr == -1)
+		{
+			return (-1);
+		}
+	}
+
 
 	close(fd);
 	return(1);
